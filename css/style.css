@@ -1,0 +1,266 @@
+/*------------ ESTILO DEL INDEX -------------*/
+body {
+  background-color: rgb(252, 252, 247);
+  font-family: "Poppins", sans-serif;
+}
+
+.nav-link {
+  font-weight: bold;
+  color: white;
+}
+
+#main .carousel-item {
+  height: 600px;
+}
+#main .carousel-item .d-block {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  filter: brightness(60%);
+}
+
+/*------------- ESTILO FORMULARIO INICIO DE SESION -------------*/
+#formulario {
+  margin: 0;
+}
+
+.singUp {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.singUp .imgBx {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.singUp .imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+.singUp .imgBx::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(255deg, #e4f3fa, #1317f0);
+  z-index: -1;
+  mix-blend-mode: screen;
+}
+.singUp .contentBx {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.singUp .contentBx .formBx {
+  width: 100%;
+  padding: 40px;
+  background-color: rgba(255, 255, 255, 0.9);
+  margin: 50px;
+  border-radius: 5px;
+}
+.singUp .contentBx .formBx h2 {
+  color: #607d8b;
+  font-weight: 600;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  border-bottom: 4px solid #1317f0;
+  display: inline;
+  letter-spacing: 1px;
+}
+.singUp .contentBx .formBx .inputBx {
+  margin-bottom: 20px;
+}
+.singUp .contentBx .formBx .inputBx span {
+  font-size: 14px;
+  margin-top: 10px;
+  display: inline-block;
+  color: #607d8b;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+.singUp .contentBx .formBx .inputBx input {
+  width: 100%;
+  text-indent: 10px;
+  height: 2rem;
+  outline: none;
+  font-weight: 400;
+  border: 1px solid #607d8b;
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: #607d8b;
+  background: transparent;
+  border-radius: 15px;
+}
+.singUp .contentBx .formBx .inputBx input[type=submit] {
+  background-color: #1317f0;
+  color: #fff;
+  outline: none;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+}
+.singUp .contentBx .formBx .inputBx input[type=submit]:hover {
+  background-color: #4d617e;
+}
+.singUp .contentBx .formBx .inputBx .recordarme {
+  margin-bottom: 10px;
+  color: #607d8b;
+  font-weight: 400;
+  font-size: 14px;
+}
+.singUp .contentBx .formBx .inputBx p {
+  color: #607d8b;
+}
+.singUp .contentBx .formBx .inputBx p a {
+  color: #1317f0;
+}
+@media (min-width: 670px) {
+  .singUp {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+  }
+  .singUp .imgBx {
+    position: relative;
+    width: 40%;
+    height: 100%;
+  }
+  .singUp .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .singUp .contentBx {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    height: 100%;
+  }
+  .singUp .contentBx .formBx {
+    width: auto;
+  }
+}
+
+/*-------------- ESTILO PROPIEDADES ---------------*/
+#bodyPropiedades {
+  font-family: "Poppins", sans-serif;
+}
+#bodyPropiedades #main-content {
+  display: grid;
+  grid-template-rows: repeat(6, 380px);
+  gap: 13px;
+  margin-top: 100px;
+  padding: 10px 20px;
+}
+#bodyPropiedades #main-content .prop {
+  background-color: #fff;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-rows: 200px 165px;
+  gap: 4px;
+  padding: 6px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px black;
+}
+#bodyPropiedades #main-content .prop .img-prop {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 3px;
+}
+#bodyPropiedades #main-content .prop .contenidoPropiedades, #bodyPropiedades #main-content .prop .contenidoTemporal {
+  font-size: 1rem;
+  text-align: left;
+  width: 100%;
+  height: 100%;
+  white-space: nowrap;
+}
+#bodyPropiedades #main-content .prop .contenidoPropiedades h4, #bodyPropiedades #main-content .prop .contenidoTemporal h4 {
+  font-weight: 900;
+}
+#bodyPropiedades #main-content .prop .contenidoPropiedades .divisor, #bodyPropiedades #main-content .prop .contenidoTemporal .divisor {
+  display: none;
+}
+#bodyPropiedades #main-content .prop .contenidoPropiedades .botones, #bodyPropiedades #main-content .prop .contenidoTemporal .botones {
+  margin-top: 1.2rem;
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  height: 2.5rem;
+}
+#bodyPropiedades #main-content .prop .contenidoPropiedades .botones .contacto, #bodyPropiedades #main-content .prop .contenidoTemporal .botones .contacto {
+  margin: 0 3px;
+  border: 1px solid black;
+  border-radius: 8px;
+  padding: 5px;
+  height: 100%;
+}
+#bodyPropiedades #main-content .prop .contenidoPropiedades .botones :hover, #bodyPropiedades #main-content .prop .contenidoTemporal .botones :hover {
+  cursor: pointer;
+}
+#bodyPropiedades #main-content .prop .contenidoPropiedades .botones input[type=submit], #bodyPropiedades #main-content .prop .contenidoTemporal .botones input[type=submit] {
+  background-color: #1317f0;
+  color: #fff;
+  border: none;
+  font-weight: 500;
+}
+@media (min-width: 560px) {
+  #bodyPropiedades #main-content {
+    grid-template-rows: repeat(6, 250px);
+  }
+  #bodyPropiedades #main-content .prop {
+    grid-template-columns: 40% 59%;
+    grid-template-rows: 100%;
+  }
+  #bodyPropiedades #main-content .prop .img-prop {
+    object-fit: cover;
+  }
+  #bodyPropiedades #main-content .prop .contenidoPropiedades, #bodyPropiedades #main-content .prop .contenidoTemporal {
+    font-size: 1.1rem;
+  }
+  #bodyPropiedades #main-content .prop .contenidoPropiedades h4, #bodyPropiedades #main-content .prop .contenidoTemporal h4 {
+    margin-bottom: 2rem;
+  }
+  #bodyPropiedades #main-content .prop .contenidoPropiedades .divisor, #bodyPropiedades #main-content .prop .contenidoTemporal .divisor {
+    display: block;
+    width: 70%;
+    margin: 25px auto;
+    border-color: black;
+    opacity: 0.4;
+  }
+}
+@media (min-width: 991px) {
+  #bodyPropiedades #main-content {
+    margin-top: 55px;
+  }
+}
+
+/* ------ ESTILO ALQUILER TEMPORAL ------- */
+.contenidoTemporal .noche {
+  font-size: 0.9rem;
+}
+.contenidoTemporal .puntaje {
+  font-size: 1rem;
+  float: right;
+}
+
+/*# sourceMappingURL=style.css.map */

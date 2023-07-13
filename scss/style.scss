@@ -1,0 +1,312 @@
+@import 'variables';
+
+/*------------ ESTILO DEL INDEX -------------*/
+body {
+    background-color: rgb(252, 252, 247);
+    font-family: 'Poppins', sans-serif;
+}
+
+.nav-link {
+    font-weight: bold;
+    color: white;
+}
+
+#main {
+    .carousel-item {
+        height: 600px;
+
+        .d-block {
+            height: 100%;
+            width: 100%;
+            object-fit:cover;
+            filter: brightness(60%);
+          }
+      }
+}
+
+
+/*------------- ESTILO FORMULARIO INICIO DE SESION -------------*/
+#formulario {
+    margin: 0; //Coloco margin 0 para que la foto quede pegada a los bordes
+}
+
+.singUp {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    .imgBx {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -2;
+        }
+    }
+
+    .imgBx::before { //creo un pseudoelemento before para crear la capa de color que va por encima de la foto original
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(255deg, #e4f3fa, $color-principal);
+        z-index: -1;
+        mix-blend-mode: screen;
+    }
+
+    .contentBx {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+
+        .formBx {
+            width: 100%;
+            padding: 40px;
+            background-color: rgba(255, 255, 255, 0.9);
+            margin: 50px;
+            border-radius: 5px;
+
+            h2 {
+                color: $color-inicioSesion;
+                font-weight: 600;
+                font-size: 1.5em;
+                text-transform: uppercase;
+                margin-bottom: 20px;
+                border-bottom: 4px solid $color-principal;
+                display: inline;
+                letter-spacing: 1px;
+            }
+
+            .inputBx {
+                margin-bottom: 20px;
+
+                span {
+                    font-size: 14px;
+                    margin-top: 10px;
+                    display: inline-block;
+                    color: $color-inicioSesion;
+                    font-weight: 300;
+                    letter-spacing: 1px;
+                }
+
+                input {
+                    width: 100%;
+                    text-indent: 10px;
+                    height: 2rem;
+                    outline: none;
+                    font-weight: 400;
+                    border: 1px solid $color-inicioSesion;
+                    font-size: 16px;
+                    letter-spacing: 1px;
+                    color: $color-inicioSesion;
+                    background: transparent;
+                    border-radius: 15px;
+                }
+
+                input[type='submit'] {
+                    background-color: $color-principal;
+                    color: #fff;
+                    outline: none;
+                    border: none;
+                    font-weight: 500;
+                    cursor: pointer;
+                }
+
+                input[type='submit']:hover {
+                    background-color: #4d617e;
+                }
+
+                .recordarme {
+                    margin-bottom: 10px;
+                    color: $color-inicioSesion;
+                    font-weight: 400;
+                    font-size: 14px;
+                }
+
+                p {
+                    color: $color-inicioSesion;
+
+                    a {
+                        color: $color-principal;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (min-width: 670px) {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+
+        .imgBx {
+            position: relative;
+            width: 40%;
+            height: 100%;
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .contentBx {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60%;
+            height: 100%;
+
+            .formBx {
+                width: auto;
+            }
+        }
+    }
+}
+
+/*-------------- ESTILO PROPIEDADES ---------------*/
+#bodyPropiedades {
+    font-family: 'Poppins', sans-serif;
+
+    #main-content {
+        display: grid;
+        grid-template-rows: repeat(6, 380px);
+        gap: 13px;
+        margin-top: 100px;
+        padding: 10px 20px;
+
+        .prop {
+            background-color: #fff;
+            box-sizing: border-box;
+            display: grid;
+            grid-template-rows: 200px 165px;
+            gap: 4px;
+            padding: 6px;
+            border-radius: 5px;
+            box-shadow: 1px 1px 3px black;
+
+            .img-prop {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 3px;
+            }
+
+            .contenidoPropiedades {
+                font-size: 1rem;
+                text-align: left;
+                width: 100%;
+                height: 100%;
+                white-space: nowrap;
+                
+                h4 {
+                    font-weight: 900;
+                }
+
+                .divisor {
+                    display: none;
+                }
+
+                .botones {
+                    margin-top: 1.2rem;
+                    display: flex;
+                    align-items: center;
+                    flex-direction: row-reverse;
+                    height: 2.5rem;
+
+                    .contacto {
+                        margin: 0 3px;
+                        border: 1px solid black;
+                        border-radius: 8px;
+                        padding: 5px;
+                        height: 100%;
+                    }
+
+                    :hover {
+                        cursor: pointer;
+                    }
+
+                    input[type='submit'] {
+                        background-color: $color-principal;
+                        color: #fff;
+                        border: none;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (min-width: 560px) {
+
+        #main-content {
+            grid-template-rows: repeat(6, 250px);
+
+            .prop {
+                grid-template-columns: 40% 59%;
+                grid-template-rows: 100%;
+
+                .img-prop {
+                    object-fit: cover;
+                }
+
+                .contenidoPropiedades {
+                    font-size: 1.1rem;
+
+                    h4 {
+                        margin-bottom: 2rem;
+                    }
+
+                    .divisor {
+                        display: block;
+                        width: 70%;
+                        margin: 25px auto;
+                        border-color: black;
+                        opacity: 0.4;
+                    }
+                }
+            }
+        }
+    }
+    
+    @media (min-width: $pantalla-large) { //puse esa medida porque es cuando se achica la barra de navegacion
+        
+        #main-content {
+            margin-top: 55px;
+        }
+    }
+}
+
+/* ------ ESTILO ALQUILER TEMPORAL ------- */
+
+.contenidoTemporal {
+    @extend .contenidoPropiedades;
+
+    .noche {
+        font-size: 0.9rem;
+    }
+
+    .puntaje {
+        font-size: 1rem;
+        float: right;
+    }
+}
